@@ -1,0 +1,669 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-principal--: #094;
+    --color-secundario--: #222;
+    --font-family--: 'open sans';
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1100px;
+    overflow: hidden;
+    /* background: chartreuse; */
+}
+
+.links {
+    display: inline-block;
+    text-decoration: none;
+    color: none;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+/* Estilos dirigidos para el segundo menu */
+
+.nav-responsive__ul{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;
+}
+
+.nav-responsive__contenedor{
+    background: rgba(34, 34, 34, 0.822); 
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    box-shadow: -4px 18px 0 10px rgba(0, 0, 0, 0.589);
+}
+
+.nav-responsive__ul-li{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    list-style: none;
+    margin-top: 50px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.nav-responsive__ul-li a{
+    color: #FFF;
+}
+
+.nav-responsive__ul-li:hover{
+   background: var(--color-principal--);
+   color: #222;
+}
+
+.nav-responsive__ul-li:hover>a{
+    color: #222;
+}
+
+/* Icono de menu */
+
+.menu{
+    position: fixed;
+    z-index: 110;
+    right: 0;
+    margin: 20px;
+    background: rgba(0, 153, 69, 0.637);
+    object-fit: cover;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px #000;
+}
+
+.menu img{
+    z-index: 50;
+    width: 30px;
+    object-fit: cover;
+}
+
+.menu:hover{
+    cursor: pointer;
+}
+
+.menu:active{
+    box-shadow: none;
+}
+
+
+/* ------Estilos Para el NAV------ */
+
+.nav-responsive__ul{
+    display: none;
+}
+
+
+header {
+    background: url(monlight-3.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.nav {
+    background-image: linear-gradient(-225deg, rgba(66, 70, 82, 0.521) 0%, rgba(52, 51, 73, 0.699) 48%, rgba(44, 47, 63, 0.164) 100%);
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.nav__ul {
+    align-self: flex-end;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-bottom: 220px;
+}
+
+.nav__ul-li {
+    display: inline-block;
+    padding: 10px 16px;
+    text-align: center;
+    list-style: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+.nav__ul-li>a {
+    text-decoration: none;
+    margin-left: 8px;
+    color: #fff;
+    font-family: 'STIX Two Text';
+}
+
+.nav__ul-li:hover {
+    background: var(--color-principal--);
+    border-radius: 30px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--color-secundario--);
+    box-shadow: 1px 2px 2px rgb(34, 1, 1);
+    transition-property: background;
+    transition-duration: .3s;
+}
+
+.nav__ul-li:active {
+    box-shadow: none;
+}
+
+/* Estilos Para el Nav__hover*/
+
+.nav__hover {
+    display: none;
+    position: relative;
+    z-index: 50;
+}
+
+.nav__ul-li:hover>.nav__hover {
+    margin-top: 5px;
+    width: 160px;
+    background: var(--color-principal--);
+    position: absolute;
+    text-align: initial;
+    border-radius: 5px;
+    display: block;
+    z-index: 100;
+}
+
+.nav__hover>li, .links {
+    display: block;
+    padding: 8px 10px 10px;
+    list-style: none;
+    font-size: 17px;
+    font-family: 'STIX Two Text';
+    color: #222;
+}
+
+.nav__hover>li:hover, .links:hover {
+    background: rgb(180, 214, 192);
+    font-weight: 600;
+    transition-property: font-weight;
+    transition-duration: 1s;
+}
+
+
+/* Lineas */
+
+.line {
+    content: '.';
+    height: 8px;
+    width: 100%;
+    background: var(--color-principal--);
+    background-attachment: fixed;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+/*------ Formulario ------*/
+
+main {
+    overflow: hidden;
+}
+
+/* Contact Info */
+.formulario {
+    width: 70%;
+    margin: 40px auto;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    background: rgb(238, 233, 222);
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.contact-info {
+    background: var(--color-principal--);
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    position: relative;
+    left: -100px;
+}
+
+.contact__titulo {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.contact-info__contenedor {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.contact-info__contenedor-icon {
+    font-size: 18px;
+    color: rgba(218, 214, 214, 0.973);
+}
+
+.contact-info__contenedor-p {
+    margin-left: 10px;
+    color: rgba(218, 214, 214, 0.973);
+    cursor: pointer;
+}
+
+/* Formulario Grid */
+
+.formulario__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 120px;
+    position: relative;
+    left: -50px;
+}
+
+.formulario__titulo {
+    margin-bottom: 20px;
+}
+
+.span2 {
+    grid-column: span 2;
+}
+
+.formulario__contenedor {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 20px 0;
+}
+
+.formulario__contenedor .input, .textarea {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: none;
+    resize: none;
+    height: 100%;
+    font-size: 18px;
+    position: relative;
+    /* border-bottom: 1px solid red; */
+}
+
+.formulario__contenedor textarea {
+    width: 116%;
+}
+
+.formulario__contenedor input {
+    width: 140%;
+}
+
+.formulario__contenedor label {
+    position: absolute;
+    top: 0;
+    font-size: 18px;
+    opacity: .5;
+    cursor: text;
+    transition: 1s ease-in-out top;
+    /* color: red; */
+}
+
+/* Efecto de los labels e inputs */
+
+span{
+    content: '.';
+    height: 2px;
+    width: 0;
+    background: #258147;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+}
+
+input:focus~span {
+    width: 140%;
+}
+
+input:focus~label, textarea:focus~label{
+    top: -25px;
+    font-size: 16px;
+    color: #25d366;
+    transition: .5s ease-in-out;
+}
+
+input:valid~label, textarea:valid~label{
+    top: -25px;
+}
+
+/* Boton */
+
+button {
+    height: 50px;
+    width: 100px;
+    background: rgba(0, 153, 69, 0.788);
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #000;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+button:active {
+    box-shadow: none;
+}
+
+
+/*-------- Aviso ----------*/
+
+.aviso-container {
+    background-color: rgba(34, 34, 34, 0.479);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    margin: auto;
+
+}
+
+.aviso {
+    height: 150px;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    margin: auto;
+    background: #c5e8ec;
+    border-radius: 5px;
+    box-shadow: 2px 1px 4px #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aviso__p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.aviso__button {
+    width: 90px;
+    height: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #BCC5CE;
+    border: none;
+    box-shadow: 1px 1px 2px #000;
+    color: #000;
+    font-size: 13.33px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.aviso__button:active {
+    box-shadow: none;
+}
+
+
+/*------ Footer ------*/
+
+footer {
+    background: url(monlight-3.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    height: 100px;
+    width: 100%;
+    overflow: hidden-;
+    /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
+    /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
+}
+
+.footer-data {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(-225deg, rgba(66, 70, 82, 0.521) 0%, rgba(52, 51, 73, 0.699) 48%, rgba(44, 47, 63, 0.164) 100%), linear-gradient(-225deg, rgba(66, 70, 82, 0.521) 0%, rgba(52, 51, 73, 0.699) 48%, rgba(44, 47, 63, 0.164) 100%), url(../Imagenes/monlight-3.jpg);
+    ;
+    background-image: linear-gradient(-225deg, rgba(66, 70, 82, 0.521) 0%, rgba(52, 51, 73, 0.699) 48%, rgba(44, 47, 63, 0.164) 100%), linear-gradient(-225deg, rgba(66, 70, 82, 0.521) 0%, rgba(52, 51, 73, 0.699) 48%, rgba(44, 47, 63, 0.164) 100%), url(../Imagenes/monlight-3.jpg);
+    ;
+}
+
+.footer-icons_ul {
+    display: flex;
+}
+
+.footer-icons_li a {
+    text-decoration: none;
+}
+
+.footer-icons_li {
+    list-style: none;
+    position: relative;
+    margin: 10px 15px;
+    cursor: pointer;
+}
+
+.i-icons {
+    padding: 1px;
+    font-size: 30px;
+    color: #222;
+}
+
+.footer-icons_li::before {
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    font-size: 30px;
+    padding: 1px;
+    font-weight: bold;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+}
+
+.footer-icons_li:nth-child(1)::before {
+    content: '\f232';
+    color: #25d366;
+    border-bottom: 3px solid #25d366;
+}
+
+.footer-icons_li:nth-child(2)::before {
+    content: '\f16d';
+    color: #d6249f;
+    border-bottom: 3px solid #d6249f;
+}
+
+.footer-icons_li:nth-child(3)::before {
+    content: '\f09a';
+    color: #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.footer-icons_li:hover::before {
+    height: 100%;
+}
+
+.name {
+    font-size: 25px;
+    color: #fff;
+    margin-top: 15px;
+    position: relative;
+}
+
+.name::after {
+    content: ' ';
+    position: absolute;
+    bottom: -4px;
+    left: 84px;
+    width: 200px;
+    height: 1px;
+    background: #222;
+}
+
+
+/*-------- Javascript ----------*/
+.display {
+    display: none;
+}
+
+.display--active {
+    display: block;
+}
+
+.background-seleccion {
+    background: rgb(184, 168, 157);
+}
+
+.background-selectores {
+    background: rgb(212, 203, 203);
+}
+
+
+/* para los inputs y labels */ 
+.error-label {
+    color: #ff0000;
+}
+
+.error-input {
+     border-bottom: 1px solid #ff0000;
+}
+
+
+
+/* ------------------- */
+/* Media query - Width */
+/* ------------------- */
+
+@media screen and (max-width:1000px){
+
+    .formulario {
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        /* flex-direction: row-reverse; */
+        background: rgb(238, 233, 222);
+        padding: 0;
+        padding-top: 0;
+    }
+
+    .contact-info {
+        width: 300px;
+        height: 400px;
+        left: 0;
+        margin-right: 20px;
+    }
+
+    .formulario__grid {
+        column-gap: 20px;
+        position: relative;
+        left: 0;
+        padding: 16px;
+    }
+
+    .formulario__contenedor input, textarea {
+        resize: none;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        position: relative;
+    }
+    
+    .formulario__contenedor textarea {
+        width: 100%;
+    }
+
+    .formulario__contenedor label {
+        font-size: 16px;
+    }
+
+    input:focus~span {
+        width: 100%;
+    }
+    
+    input:focus~label, textarea:focus~label{
+        font-size: 14px;
+    }
+    
+    input:valid~label, textarea:valid~label{
+        top: -25px;
+    }
+}
+
+@media screen and (max-width:700px){
+
+    .nav__ul {
+        display: none;
+    }
+
+    .nav__button {
+        display: none;
+    }
+
+    .nav-responsive__ul {
+        display: inherit;
+    }
+
+    .nav-responsive__ul-li {
+        margin-top: 40px;
+        font-size: 18px;
+    }
+
+    main {
+        height: auto;
+        overflow: unset;
+    }
+
+    .formulario {
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-info {
+        width: 100%;
+        height: 300px;
+        left: 0;
+        margin-right: 20px;
+    }
+
+    .formulario__grid {
+        padding: 20px;
+    }
+
+    .formulario__contenedor input, textarea {
+        resize: none;
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        position: relative;
+    }
+    
+    input:focus~label, textarea:focus~label{
+        font-size: 14px;
+    }
+
+    button {
+        height: 30px;
+        width: 100px;
+        font-size: 16px;
+    }
+    
+}

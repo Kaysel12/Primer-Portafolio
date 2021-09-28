@@ -1,0 +1,629 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-principal--: #094;
+    --color-secundario--: #222;
+    --font-family--: 'open sans';
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1100px;
+    overflow: hidden;
+    /* background: chartreuse; */
+}
+
+.links {
+    display: inline-block;
+    text-decoration: none;
+    color: none;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+/* Estilos dirigidos para el segundo menu */
+
+.nav-responsive__ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nav-responsive__contenedor {
+    background: rgba(34, 34, 34, 0.822);
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    box-shadow: -4px 18px 0 10px rgba(0, 0, 0, 0.589);
+}
+
+.nav-responsive__ul-li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    list-style: none;
+    margin-top: 50px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.nav-responsive__ul-li a {
+    color: #FFF;
+}
+
+.nav-responsive__ul-li:hover {
+    background: var(--color-principal--);
+    color: #222;
+}
+
+.nav-responsive__ul-li:hover>a {
+    color: #222;
+}
+
+
+/* Icono de menu */
+
+.menu{
+    position: fixed;
+    z-index: 110;
+    right: 0;
+    margin: 20px;
+    background: rgba(0, 153, 69, 0.637);
+    object-fit: cover;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px #000;
+}
+
+.menu img{
+    z-index: 50;
+    width: 30px;
+    object-fit: cover;
+}
+
+.menu:hover{
+    cursor: pointer;
+}
+
+.menu:active{
+    box-shadow: none;
+}
+
+
+/* ------Estilos Para el NAV------ */
+
+.nav-responsive__ul {
+    display: none;
+}
+
+header {
+    background: url(../Imagenes/monlight-3.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.nav {
+    background-image: linear-gradient(-225deg, rgba(66, 70, 82, 0.521) 0%, rgba(52, 51, 73, 0.699) 48%, rgba(44, 47, 63, 0.164) 100%);
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.nav__ul {
+    align-self: flex-end;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-bottom: 220px;
+}
+
+.nav__ul-li {
+    display: inline-block;
+    padding: 10px 16px;
+    text-align: center;
+    list-style: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+.nav__ul-li>a {
+    text-decoration: none;
+    margin-left: 8px;
+    color: #fff;
+    font-family: 'STIX Two Text';
+}
+
+.nav__ul-li:hover {
+    background: var(--color-principal--);
+    border-radius: 30px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--color-secundario--);
+    box-shadow: 1px 2px 2px rgb(34, 1, 1);
+    transition-property: background;
+    transition-duration: .3s;
+}
+
+.nav__ul-li:active {
+    box-shadow: none;
+}
+
+/* Estilos Para el Nav__hover*/
+
+.nav__hover {
+    display: none;
+}
+
+.nav__ul-li:hover>.nav__hover {
+    margin-top: 5px;
+    width: 160px;
+    background: var(--color-principal--);
+    position: absolute;
+    text-align: initial;
+    border-radius: 5px;
+    display: block;
+    z-index: 100;
+}
+
+.nav__hover>li,
+.links {
+    display: block;
+    padding: 8px 10px 10px;
+    list-style: none;
+    font-size: 17px;
+    font-family: 'STIX Two Text';
+    color: #222;
+}
+
+.nav__hover>li:hover,
+.links:hover {
+    background: rgb(180, 214, 192);
+    font-weight: 600;
+    transition-property: font-weight;
+    transition-duration: 1s;
+}
+
+
+/* Lineas */
+
+.line {
+    content: '.';
+    height: 8px;
+    width: 100%;
+    background: var(--color-principal--);
+    background-attachment: fixed;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.proyects__elementos-line {
+    content: '.';
+    height: 5px;
+    width: 100%;
+    background: var(--color-principal--);
+    background-attachment: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+
+
+/*-------- main - Poroyects ----------*/
+
+.proyects {
+    margin-top: 15px;
+}
+
+/* Seccion del menu */
+.proyects__guia {
+    display: flex;
+}
+
+.proyects__secciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    margin-top: 20px;
+    width: 300px;
+    /* background: #d6249f; */
+}
+
+.proyects__secciones-titulos {
+    display: flex;
+    justify-content: center;
+    /* background: gray; */
+    width: 100%;
+}
+
+.proyects__a {
+    padding: 8px 20px;
+    border: 1px solid #000;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 15px;
+    font-size: 17px;
+    margin-left: 3px;
+    text-decoration: none;
+    color: rgb(65, 63, 95);
+}
+
+.proyects__secciones-elecciones {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyects__secciones-elements {
+    border-radius: 6px;
+    margin-bottom: 6px;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 -2px 2px rgb(163, 157, 157);
+}
+
+.proyects__secciones-elements:active {
+    box-shadow: none;
+}
+
+.proyects__secciones-a {
+    text-decoration: none;
+    /* line-height: 25px; */
+}
+
+.proyects__secciones-img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+    margin-top: 18px;
+}
+
+.left {
+    margin-left: 14px;
+}
+
+
+
+/* Elementos */
+
+.proyects__desarrollados {
+    margin-left: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.proyects__elementos {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contenedor-elementos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contenedor-elementos__elemento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+
+.elemento-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 6px;
+    box-shadow: 2px 3px 3px;
+    border-radius: 5px;
+    border: 3px solid rgba(0, 0, 0, 0.274);
+}
+
+.elemento-img:active {
+    box-shadow: none;
+    border: none;
+}
+
+.contenedor-elementos__elemento:active>.elemento-img {
+    box-shadow: none;
+    border: none;
+}
+
+
+/*------ Curriculum ------*/
+/* Iframe */
+.proyects__curriculum {
+    width: 100%;
+    height: 600px;
+    margin: 20px 0;
+    margin-left: 20px;
+}
+
+.iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.nota {
+    margin: 1px 3px;
+}
+
+/*-------- Aviso ----------*/
+
+.aviso-container {
+    background-color: rgba(34, 34, 34, 0.479);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    margin: auto;
+}
+
+.aviso {
+    height: 150px;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    margin: auto;
+    background: #c5e8ec;
+    border-radius: 5px;
+    box-shadow: 2px 1px 4px #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aviso__p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.aviso__button {
+    width: 90px;
+    height: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #BCC5CE;
+    border: none;
+    box-shadow: 1px 1px 2px #000;
+    font-weight: bold;
+}
+
+.aviso__button:active {
+    box-shadow: none;
+}
+
+
+/*--------Footer----------*/
+
+footer {
+    background: url(../Imagenes/monlight-3.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    height: 100px;
+    width: 100%;
+    overflow: hidden-;
+    /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
+    /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
+    background-image: linear-gradient(-225deg, rgba(66, 70, 82, 0.521) 0%, rgba(52, 51, 73, 0.699) 48%, rgba(44, 47, 63, 0.164) 100%), linear-gradient(-225deg, rgba(66, 70, 82, 0.521) 0%, rgba(52, 51, 73, 0.699) 48%, rgba(44, 47, 63, 0.164) 100%), url(../Imagenes/monlight-3.jpg);
+    ;
+}
+
+.footer-data {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icons_ul {
+    display: flex;
+}
+
+.footer-icons_li a {
+    text-decoration: none;
+}
+
+.footer-icons_li {
+    list-style: none;
+    position: relative;
+    margin: 10px 15px;
+    cursor: pointer;
+}
+
+.i-icons {
+    padding: 1px;
+    font-size: 30px;
+    color: #222;
+}
+
+.footer-icons_li::before {
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    font-size: 30px;
+    padding: 1px;
+    font-weight: bold;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+}
+
+.footer-icons_li:nth-child(1)::before {
+    content: '\f232';
+    color: #25d366;
+    border-bottom: 3px solid #25d366;
+}
+
+.footer-icons_li:nth-child(2)::before {
+    content: '\f16d';
+    color: #d6249f;
+    border-bottom: 3px solid #d6249f;
+}
+
+.footer-icons_li:nth-child(3)::before {
+    content: '\f09a';
+    color: #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.footer-icons_li:hover::before {
+    height: 100%;
+}
+
+.name {
+    font-size: 25px;
+    color: #fff;
+    margin-top: 15px;
+    position: relative;
+}
+
+.name::after {
+    content: ' ';
+    position: absolute;
+    bottom: -4px;
+    left: 84px;
+    width: 200px;
+    height: 1px;
+    background: #222;
+}
+
+
+/*-------- Javascript ----------*/
+.display {
+    display: none;
+}
+
+.display--active {
+    display: block;
+}
+
+.background-seleccion {
+    background: rgb(184, 168, 157);
+}
+
+.background-selectores {
+    background: rgb(212, 203, 203);
+}
+
+
+
+/* ------------------- */
+/* Media Query - width */
+/* ------------------- */
+
+@media screen and (max-width:770px) {
+
+    .proyects__curriculum {
+        width: 300px;
+        height: 600px;
+        background: none;
+        margin: 0 0;
+        margin-left: 20px;
+    }
+
+    .iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    
+.nav__ul {
+    display: none;
+}
+
+.nav__button {
+    display: none;
+}
+
+.nav-responsive__ul {
+    display: inherit;
+}
+
+.nav-responsive__ul-li {
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+}
+
+
+@media screen and (max-width:500px) {
+
+    .proyects__desarrollados {
+        margin-left: 10px;
+    }
+
+    .proyects__secciones {
+        width: 200px;
+    }
+
+    .proyects__secciones-titulos {
+        width: 60%;
+    }
+
+    .proyects__a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .proyects__secciones-elements {
+        width: 150px;
+        height: 100px;
+    }
+
+    .proyects__secciones-img {
+        height: 50px;
+        width: 50px;
+        object-fit: contain;
+    }
+
+    .proyects__secciones-a {
+        font-size: 14px;
+    }
+
+    .left {
+        margin-left: none;
+    }
+}
+
+.flechita {
+    font-weight: bold;
+    font-size: 20px;
+}
