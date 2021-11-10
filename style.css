@@ -407,7 +407,7 @@ body {
 
 /*Organizacion de los rangos*/
 
-.skills__range-contenedor:nth-child(3) b:before,
+.skills__range-contenedor:nth-child(6) b:before,
 .skills__range-contenedor:nth-child(5) b:before {
     width: 26%;
 }

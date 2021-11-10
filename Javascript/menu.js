@@ -50,10 +50,18 @@ let myCvAccion = ()=>{
     proyects.classList.add('background-selectores')
 }
 
-mycv.addEventListener('click', () => {
-    myCvAccion();
-})
+try {
+    mycv.addEventListener('click', () => {
+        myCvAccion();
+    })
+} catch (error) {
+    console.warn("Hay componentes del menu que no pueden ser utilizadas en esta seccion de la pagina. Esto fue manejado con un TryCatch");
+}
 
-mycv2.addEventListener('click', ()=>{
-    myCvAccion();
-})
+try {
+    mycv2.addEventListener('click', ()=>{
+        myCvAccion();
+    })
+} catch (error) {
+    console.warn("Hay componentes del menu que no pueden ser utilizadas en esta seccion de la pagina. Esto fue manejado con un TryCatch");
+}
