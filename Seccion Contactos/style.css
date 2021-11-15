@@ -423,9 +423,8 @@ footer {
     background: url(monlight-3.jpg);
     background-size: contain;
     background-attachment: fixed;
-    height: 100px;
     width: 100%;
-    overflow: hidden-;
+    text-align: center;
     /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
     /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
 }

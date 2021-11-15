@@ -601,9 +601,7 @@ body {
 /*--------Footer----------*/
 
 footer {
-    height: 100px;
     width: 100%;
-    overflow: hidden-;
     /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
     /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
     background-image: linear-gradient(-225deg, rgba(66, 70, 82, 0.521) 0%, rgba(52, 51, 73, 0.699) 48%, rgba(44, 47, 63, 0.164) 100%), linear-gradient(-225deg, rgba(66, 70, 82, 0.521) 0%, rgba(52, 51, 73, 0.699) 48%, rgba(44, 47, 63, 0.164) 100%);
